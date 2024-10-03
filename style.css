@@ -1,0 +1,84 @@
+/* Reset some default styles in browsers */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add margin below h2 tags */
+h2 {
+    margin-bottom: 0.4em;
+}
+
+/* Apply background color and font to body */
+body {
+    background-color: #3B1C0B;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #3B1C0B;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Move the hamburger a bit to the left and down */
+.hamburger {
+    margin-left: -20px;
+    margin-top: 7px;
+}
+
+.logo-container {
+    display: inline-block;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Section styles */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.welcome {
+    background-color: #C08552;
+    color: white;
+}
+
+.shop {
+    background-color: #F4F1DE;
+}
+
+.shop .coffee-list {
+    list-style: none;
+}
+
+.about-us {
+    background-color: #C08552;
+    color: white;
+}
+
+.contact-us, .contact-us a {
+    color: white;
+}
+
+/* Footer styles */
+footer {
+    background-color: #3B1C0B;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer.h2 {
+    color: white;
+}
+
+/* Cart styles */
+.add-to-cart-button {
+  margin-left: 1em;
+}
