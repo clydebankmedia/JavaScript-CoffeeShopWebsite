@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>sTunes Tracks</title>
+	</head>
+	<body>
+		<div id="content">
+			<table id="tracks">
+				<th>
+					<td>ID</td>
+					<td>Name</td>
+					<td>Composer</td>
+					<td>Price</td>
+				</th>
+			</table>
+		</div>
+		<script>
+			const url = "http://localhost:3000"
+			fetch(url).then(response => response.json())
+			.then(data => {
+				const tracksTable = document.getElementById("tracks")
+				// Iterate over the results
+				data.forEach(row => {
+					console.log(row)
+					// Create the needed DOM elements 
+					let resultRow = document.createElement("tr")
+					let cellId = document.createElement("td")
+					let cellName = document.createElement("td")
+					let cellPrice = document.createElement("td")
+
+					// Put the data in the columns
+					cellId.innerText = row.TrackId
+					cellName.innerText = row.Name
+					cellPrice.innerText = row.UnitPrice
+
+					// Append columns to the row
+					resultRow.appendChild(cellId)
+					resultRow.appendChild(cellName)
+					resultRow.appendChild(cellPrice)
+
+					// Append row to the table
+					tracksTable.appendChild(resultRow)
+				})
+			})
+		</script>
+	</body>
+</html>
