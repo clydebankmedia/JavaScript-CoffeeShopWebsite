@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Hello!</title>
+	</head>
+	<body>
+		<div id="content">
+			<p id="message">Hello </p>
+		</div>
+		<script>
+			const url = "http://localhost:3000"
+			fetch(url).then(response => response.json())
+			.then(data => {
+				const message = document.getElementById("message")
+				message.innerHTML += data.firstName + "!"
+			}
+			)
+		</script>
+	</body>
+</html>
