@@ -443,7 +443,7 @@ const cartViewPrototype = {
             let li = document.createElement("li")
 
             // Add the text content to the li element with the separator
-            li.textContent = k + separator + v
+            li.textContent = k + separator + v.toFixed(2)
 
             // Append the li element to the unordered list
             ul.appendChild(li)
